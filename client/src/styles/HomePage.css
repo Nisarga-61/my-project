@@ -1,0 +1,365 @@
+/* Home Page Styling */
+
+.home-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  position: relative;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-icon {
+  font-size: 32px;
+}
+
+.logo-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.logout-link {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.logout-link:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Main Section */
+.main-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 50%,
+    #667eea 100%
+  );
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600'%3E%3Cdefs%3E%3Cpattern id='buses' x='0' y='0' width='400' height='300' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 100 150 Q 200 100 300 150' stroke='rgba(255,255,255,0.1)' stroke-width='2' fill='none'/%3E%3Ccircle cx='120' cy='180' r='8' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='280' cy='180' r='8' fill='rgba(255,255,255,0.1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='1200' height='600' fill='url(%23buses)'/%3E%3C/svg%3E");
+  opacity: 0.3;
+  animation: slidePattern 20s linear infinite;
+}
+
+@keyframes slidePattern {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(400px);
+  }
+}
+
+/* Search Card */
+.search-card {
+  position: relative;
+  z-index: 10;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  width: 90%;
+  max-width: 900px;
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 28px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.form-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.field-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.field-icon {
+  font-size: 16px;
+}
+
+.input-field {
+  padding: 14px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  background: #fafafa;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.input-field:focus {
+  outline: none;
+  background: white;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input-field::placeholder {
+  color: #bbb;
+}
+
+/* Swap Button */
+.swap-button {
+  align-self: flex-end;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 6px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.swap-button:hover {
+  border-color: #667eea;
+  background: #f5f5ff;
+  transform: rotate(180deg);
+}
+
+/* Search Button */
+.search-button {
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: inherit;
+  margin-top: 8px;
+}
+
+.search-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.search-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 20px;
+  }
+
+  .logo-name {
+    font-size: 18px;
+  }
+
+  .navbar {
+    gap: 16px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .search-card {
+    padding: 28px 20px;
+    width: 95%;
+  }
+
+  .search-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .form-row {
+    gap: 12px;
+  }
+
+  .input-field {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .swap-button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    gap: 12px;
+  }
+
+  .logo-icon {
+    font-size: 24px;
+  }
+
+  .logo-name {
+    font-size: 16px;
+  }
+
+  .navbar {
+    width: 100%;
+    gap: 10px;
+    order: 3;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    font-size: 12px;
+    padding: 6px 8px;
+    flex: 1;
+    text-align: center;
+  }
+
+  .search-card {
+    padding: 20px 16px;
+  }
+
+  .search-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form-field {
+    width: 100%;
+  }
+
+  .swap-button {
+    align-self: center;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .input-field {
+    padding: 11px 12px;
+  }
+}
