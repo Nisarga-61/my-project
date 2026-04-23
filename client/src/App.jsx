@@ -10,6 +10,15 @@ function App() {
       <Login />
       {/* <Login /> */}
     </div>
+import HomePage from './pages/SignupPage';
+import './App.css';
+import SignupPage from './pages/SignupPage';
+
+function App() {
+  return (
+    <>
+      <SignupPage />
+    </>
   );
 }
 

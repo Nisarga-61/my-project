@@ -1,0 +1,491 @@
+/* Bus Results Page Styling */
+
+.bus-results-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.results-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 30px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.results-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
+}
+
+.results-subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+/* Main Container */
+.results-container {
+  display: flex;
+  gap: 24px;
+  max-width: 1400px;
+  margin: 24px auto;
+  padding: 0 20px;
+}
+
+/* Sidebar - Filters */
+.filters-sidebar {
+  width: 280px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+  position: sticky;
+  top: 24px;
+}
+
+.filters-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 20px;
+  letter-spacing: -0.3px;
+}
+
+.filter-group {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.filter-group:last-of-type {
+  border-bottom: none;
+}
+
+.filter-heading {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.filter-checkbox:hover {
+  color: #667eea;
+}
+
+.filter-checkbox input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+.checkbox-label {
+  user-select: none;
+}
+
+/* Price Range */
+.price-range-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.price-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.price-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #667eea;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+}
+
+.price-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #667eea;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+  border: none;
+}
+
+.price-display {
+  font-size: 13px;
+  font-weight: 600;
+  color: #667eea;
+  text-align: center;
+}
+
+.clear-filters-button {
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 12px;
+}
+
+.clear-filters-button:hover {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+/* Buses Section */
+.buses-section {
+  flex: 1;
+}
+
+.buses-count {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.buses-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Bus Card */
+.bus-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.bus-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.bus-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.bus-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bus-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.bus-type-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.bus-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #ff9800;
+}
+
+.rating-star {
+  font-size: 14px;
+}
+
+.rating-value {
+  color: #333;
+}
+
+/* Bus Details */
+.bus-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.time-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.time-slot {
+  flex: 1;
+}
+
+.time {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.location {
+  font-size: 12px;
+  color: #999;
+  margin: 4px 0 0;
+}
+
+.duration-line {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.duration-info {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+  padding: 0 8px;
+  background: white;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.duration-line::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #667eea, transparent);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.bus-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.seats-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.seats-label {
+  font-size: 13px;
+  color: #666;
+}
+
+.seats-count {
+  font-size: 14px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.price-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.price-label {
+  font-size: 11px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.price-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+.select-seats-button {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  font-family: inherit;
+}
+
+.select-seats-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.select-seats-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .results-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .filters-sidebar {
+    width: 100%;
+    position: static;
+  }
+
+  .bus-footer {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .results-header {
+    padding: 20px;
+  }
+
+  .results-title {
+    font-size: 22px;
+  }
+
+  .results-subtitle {
+    font-size: 13px;
+  }
+
+  .results-container {
+    padding: 0 16px;
+    margin: 16px auto;
+    gap: 16px;
+  }
+
+  .bus-card {
+    padding: 16px;
+  }
+
+  .bus-card-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .bus-rating {
+    align-self: flex-start;
+  }
+
+  .time-section {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .bus-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .select-seats-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .results-header {
+    padding: 16px;
+  }
+
+  .results-title {
+    font-size: 20px;
+  }
+
+  .filters-sidebar {
+    padding: 16px;
+  }
+
+  .bus-card {
+    padding: 14px;
+  }
+
+  .bus-name {
+    font-size: 15px;
+  }
+
+  .time {
+    font-size: 16px;
+  }
+
+  .price-value {
+    font-size: 18px;
+  }
+
+  .time-section {
+    font-size: 12px;
+  }
+}
